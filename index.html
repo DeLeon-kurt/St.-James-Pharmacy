@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>HOME | ST. JAMES PHARMACY</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+<body ->
+    <div class="bg">
+        <div class="topbanner">
+            <nav>
+                <a href="index.html" target="_self"><img id="logo" src="images/logo2.png" /></a>
+                <div class="burger-menu" onclick="toggleMenu()">☰</div>
+                <ul>
+                    <li><a href="" target="_self" style="color: #1e6032">HOME</a></li>
+                    <li><a href="about.html" target="_self">ABOUT</a></li>
+                    <li><a href="catalog.html" target="_self">CATALOG</a></li>
+                    <li><a href="contact.html" target="_self">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="content_banner">
+            <video id="banner" controls autoplay >
+                <source src="images/homevid.mp4" type="video/mp4" />
+                 Your browser does not support the video tag.
+            </video>
+
+            <div id="index_intro_container">
+                <div id="index_intro">
+                    <h1>" The digital platform of St. James Pharmacy located at Panghulo, Malabon.<br />Offering you a wide range catalog of available medicines based on  , your needs since <a style="color: #1e6032; font-weight: bolder;" >2020. "</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <section id="second_section">
+            <div id="second_section_text">
+                <p>From a dream, to an accomplishment. St. James Pharmacy offers a wide-variety of medicines and vitamins for people of all sorts. Let us not make a long dialogue, come and visit... <a href="catalog.html">OUR CATALOG</a>.
+                </p>
+            </div>
+            
+            <div id="second_section_img">
+                <img id="" src="images/banner1.jpg">
+            </div>    
+        </section>
+          
+        <section id="map_section">
+            <div id="title_map_container">
+                <div id="title_map">
+                    <h1>WE ARE LOCATED AT</h1>
+                </div>
+            </div>
+            
+            <div id="content_index">
+                <div id="map_container">
+                    <div id="map"><iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=800&amp;height=500&amp;hl=en&amp;q=10%20Luis,%20Malabon,%201470%20Metro%20Manila+(St.%20James%20Pharmacy)&amp;t=&amp;z=20&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps systems</a></iframe></div>           
+                </div>
+             </div>
+        </section>
+    </div>
+</body>
+
+<footer>
+    <p>St. James Pharmacy | Copyright ©️ <i>All Rights Reserved.</i> 2024 | Web Development by: Y. Bakil, R.G. Calla, K.L. De Leon | For Academic Purposes Only.</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        var ul = document.querySelector("nav ul");
+            ul.classList.toggle("show");
+     }
+</script>
+
+
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>CATALOG | ST. JAMES PHARMACY</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="topbanner">
+            <nav>
+                <a href="../index.html" target="_self"><img id="logo" src="../images/logo2.png" /></a>
+                <div class="burger-menu" onclick="toggleMenu()">☰</div>
+                <ul>
+                    <li><a href="../index.html" target="_self">HOME</a></li>
+                    <li><a href="../about.html" target="_self">ABOUT</a></li>
+                    <li><a href="../catalog.html" target="_self" style="color:#1e6032">CATALOG</a></li>
+                    <li><a href="../contact.html" target="_self">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="back-button">
+            <button id="back" type="Buttonback" ><a href="../catalog.html">BACK</a></button>
+        </div>
+        
+		<section>
+            
+            <div id="content_catalog_item">
+                <div id="img_catalog_item_container">
+                    <img id="img_catalog_item" src="../images/Hypoglycemic1.jpg" />
+                </div>
+
+                <div id="description_catalog_item_container">
+                    <h1 id="title_catalog_item" style="color:#0f1270;">Gliclazide 60mg, 80mg</h1>
+                    <p>
+                        Gliclazide is an oral medication used to control blood sugar levels in people with type 2 diabetes. It helps increase insulin production from the pancreas. For the 60 mg modified-release tablets, the usual dose is 30-120 mg once daily with breakfast. For the 80 mg tablets, the usual dose is 40-320 mg per day, divided into 1-2 doses, usually taken with meals. It is important to monitor blood sugar levels regularly and avoid skipping meals to prevent low blood sugar.
+                    </p>
+                   
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+<footer>
+    <p>St. James Pharmacy | Copyright ©️ <i>All Rights Reserved.</i> 2024 | Web Development by: Y. Bakil, R.G. Calla, K.L. De Leon | For Academic Purposes Only.</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        var ul = document.querySelector("nav ul");
+            ul.classList.toggle("show");
+     }
+</script>
+
+
+
+</html>

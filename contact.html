@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>CONTACT | ST. JAMES PHARMACY</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="topbanner">
+            <nav>
+                <a href="index.html" target="_self"><img id="logo" src="images/logo2.png" /></a>
+                <div class="burger-menu" onclick="toggleMenu()">☰</div>
+                <ul>
+                    <li><a href="index.html" target="_self">HOME</a></li>
+                    <li><a href="about.html" target="_self">ABOUT</a></li>
+                    <li><a href="catalog.html" target="_self">CATALOG</a></li>
+                    <li><a href="" target="_self" style="color: #1e6032">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+
+		<section>
+
+            <div id="title_contact_container">
+                <div id="title_contact">
+                    <h1>CONTACT</h1>
+                </div>
+            </div>
+
+            <div id="content_contact">
+                <form id="form" action="https://api.web3forms.com/submit" method="POST" autocomplete="off">
+                    
+                    <input type="hidden" name="access_key" value="88ddbf98-8aa9-47bb-a35c-a1a41e7a3408">
+
+                    <label for = "Email">EMAIL</label>
+                    <input type="text" id ="email" placeholder="Enter your email" name="Email" required /><br />
+        
+                    <label for = "Name">NAME</label>
+                    <input type="text" id ="name" placeholder="Enter your name" name="Name" required /><br />
+        
+                    <label for = "Message">MESSAGE</label>
+                    <textarea type="text" id ="message" placeholder="Enter your message" name="Message" required ></textarea>
+    
+                    <button id="submit" type="Buttonsubmit"><a>SUBMIT</a></button>
+        
+                </form>
+    
+                <hr />
+    
+                <div id="contacts">
+                    <div id="buttons">
+                        <div id="facebook"><a href="https://www.facebook.com/stjamespharmacyph?mibextid=ZbWKwL" target="blank"><img src="images/fb.png" /></a></div>
+                    </div>
+                    <br />
+                    <h3>jasnelsantiago100303@gmail.com</h3><br />
+                    <h3>#25 Luis St. Panghulo, Malabon City , <br />Malabon, Philippines</h3><br />
+                    <h3>+63-9561100054</h3><br />
+                </div>
+
+               
+            </div>
+
+        </section>
+    </div>
+</body>
+
+<footer>
+    <p>St. James Pharmacy | Copyright ©️ <i>All Rights Reserved.</i> 2024 | Web Development by: Y. Bakil, R.G. Calla, K.L. De Leon | For Academic Purposes Only.</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        var ul = document.querySelector("nav ul");
+            ul.classList.toggle("show");
+     }
+
+     document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('form').addEventListener('submit', function(event) {
+                var emailField = document.getElementById('email');
+                var email = emailField.value;
+                
+                if (!email.includes('@gmail.com')  && !email.includes('@yahoo.com')) {
+                    alert('Invalid email address');
+                    event.preventDefault(); 
+                }
+            });
+        });
+        
+        
+        
+</script>   
+
+
+
+</html>

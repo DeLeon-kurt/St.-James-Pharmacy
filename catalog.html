@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>CATALOG | ST. JAMES PHARMACY</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="topbanner">
+            <nav>
+                <a href="index.html" target="_self"><img id="logo" src="images/logo2.png" /></a>
+                <div class="burger-menu" onclick="toggleMenu()">☰</div>
+                <ul>
+                    <li><a href="index.html" target="_self">HOME</a></li>
+                    <li><a href="about.html" target="_self">ABOUT</a></li>
+                    <li><a href="" target="_self"  style="color:#1e6032">CATALOG</a></li>
+                    <li><a href="contact.html" target="_self">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <section>
+            <div id="title_catalog_container">
+                <div id="title_catalog">
+                    <h1>CATALOG</h1>
+                </div>
+            </div>
+    
+            <div id="content_catalog">
+                <form id="form_search" action="#" method="GET">
+                    <input type="text" id="search-input" placeholder="Product Name..." />
+                    <button type="submit"><img id="img_about" src="images/search.png" /></button>
+                </form>
+    
+                <div class="accordion">
+                    <input type="checkbox" id="accordion-1" />
+                    <label class="accordion-header" for="accordion-1">ANTIHISTAMINE</label>
+                    <div class="accordion-content-container">
+                        <div class="accordion-content1">
+                        </div>
+                    </div>
+                    
+                    <input type="checkbox" id="accordion-2" />
+                    <label class="accordion-header" for="accordion-2">ANALGESIC</label>
+                    <div class="accordion-content-container">
+                        <div class="accordion-content2">
+                        </div>
+                    </div>
+
+                    <input type="checkbox" id="accordion-3" />
+                    <label class="accordion-header" for="accordion-3">COUGH SUPPRESSANT</label>
+                    <div class="accordion-content-container">
+                        <div class="accordion-content3">
+                        </div>
+                    </div>
+
+                    <input type="checkbox" id="accordion-4" />
+                    <label class="accordion-header" for="accordion-4">ANTITUSSIVE</label>
+                    <div class="accordion-content-container">
+                        <div class="accordion-content4">
+                        </div>
+                    </div>
+
+                    
+                    <input type="checkbox" id="accordion-5" />
+                    <label class="accordion-header" for="accordion-5"><a style="color: #1e6032;">Rx</a>: ANTI-ASTHMA</label>
+                    <div class="accordion-content-container">
+                        <div class="accordion-content5">
+                        </div>
+                    </div>
+
+                    <input type="checkbox" id="accordion-6" />
+                    <label class="accordion-header" for="accordion-6"><a style="color: #1e6032;">Rx</a>: ANTIBIOTIC</label>
+                    <div class="accordion-content-container">
+                        <div class="accordion-content6">
+                        </div>
+                    </div>
+
+                    <input type="checkbox" id="accordion-7" />
+                    <label class="accordion-header" for="accordion-7">ANTI-ITCH</label>
+                    <div class="accordion-content-container">
+                        <div class="accordion-content7">
+                        </div>
+                    </div>
+
+                    <input type="checkbox" id="accordion-8" />
+                    <label class="accordion-header" for="accordion-8">ANTISEPTIC</label>
+                    <div class="accordion-content-container">
+                        <div class="accordion-content8">
+                        </div>
+                    </div>
+
+                    <input type="checkbox" id="accordion-9" />
+                    <label class="accordion-header" for="accordion-9">ANTACID</label>
+                    <div class="accordion-content-container">
+                        <div class="accordion-content9">
+                        </div>
+                    </div>
+
+                    <input type="checkbox" id="accordion-10" />
+                    <label class="accordion-header" for="accordion-10">VITAMINS</label>
+                    <div class="accordion-content-container">
+                        <div class="accordion-content10">
+                        </div>
+                    </div>
+
+                    <input type="checkbox" id="accordion-11" />
+                    <label class="accordion-header" for="accordion-11">ANTI-GOUT</label>
+                    <div class="accordion-content-container">
+                        <div class="accordion-content11">
+                        </div>
+                    </div>
+
+                    <input type="checkbox" id="accordion-12" />
+                    <label class="accordion-header" for="accordion-12">HYPOGLYCEMIC</label>
+                    <div class="accordion-content-container">
+                        <div class="accordion-content12">
+                        </div>
+                    </div>
+
+                    <input type="checkbox" id="accordion-13" />
+                    <label class="accordion-header" for="accordion-13">ANTI-DIARRHEAL</label>
+                    <div class="accordion-content-container">
+                        <div class="accordion-content13">
+                        </div>
+                    </div>
+
+                    <input type="checkbox" id="accordion-14" />
+                    <label class="accordion-header" for="accordion-14">ANTI-HYPERTENSIVE</label>
+                    <div class="accordion-content-container">
+                        <div class="accordion-content14">
+                        </div>
+                    </div>
+
+                        <input type="checkbox" id="accordion-15" />
+                    <label class="accordion-header" for="accordion-15">OTHERS</label>
+                    <div class="accordion-content-container">
+                        <div class="accordion-content15">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+        
+        
+            document.getElementById('form_search').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                const title = card.getAttribute('data-title').toLowerCase();
+                    if (title.includes(query)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+            }   );
+        
+            cards.forEach(card => {
+                var description = card.querySelector('.description');
+                    if (description.style.display !== 'none') {
+                        description.style.display = 'none';
+                    }
+            }   );
+
+   
+            cards.forEach(card => {
+                const title = card.getAttribute('data-title').toLowerCase();
+                    if (title.includes(query)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+            }   );
+            }   );
+
+
+            function toggleDescription() {
+                var description = this.querySelector('.description');
+                    if (description.style.display === 'none') {
+                        description.style.display = 'block';
+                    } else {
+                        description.style.display = 'none';
+                    }           
+            }
+
+            var accordionData = [
+                {   
+                    container: '.accordion-content1',
+                    items: ['Cetirizine', 'Zykast', 'Dipenhidramine HCl'],
+                    descriptions: [
+                        'Adults and kids over 6 can take 5-10 mg once a day.', 
+                        'People 15 and older take one tablet daily in the evening.', 
+                        'Adults and kids over 12 can take 25-50 mg every 4-6 hours for allergies or 50 mg before bed for sleep. '],
+                    prices: ['PHP 16.20', 'PHP 32.50', 'PHP 245.30'],   
+                    links: ['medicines/cetirizine.html', 'medicines/zykast.html', 'medicines/dipenhidramine.html'],
+                    imagePrefix: 'Antihistamine'
+                },
+                {
+                    container: '.accordion-content2',
+                    items: ['Paracetamol', 'Alaxan', 'Naproxen Na', 'Rexidol','Saridon', 'Dolfenal', 'Medicol', 'Ritemed Mefenamic Acid', 'Ponstan SF', 'Advil', 'Calpol'],
+                    descriptions: ['Adults can take 500-1000 mg every 4-6 hours, with a maximum of 4000 mg per day.', 
+                    ' Adults can take one tablet every 6 hours as needed, but no more than 4 tablets in a day.', 
+                    'Adults can take 220-440 mg every 8-12 hours as needed, with a maximum of 660 mg per day.',
+                    'Adults can take 1-2 tablets every 4-6 hours, with a maximum of 8 tablets per day.',
+                    'Adults can take 1-2 tablets every 4-6 hours, with a maximum of 6 tablets per day.',
+                    'Adults can take 500 mg initially, then 250 mg every 6 hours as needed, with a maximum of 7 days of use.',
+                    'Adults can take 200-400 mg every 4-6 hours as needed, with a maximum of 1200 mg per day.',
+                    'Adults can take 500 mg initially, then 250 mg every 6 hours as needed, for a maximum of 7 days.',
+                    'Adults can take 500 mg initially, followed by 250 mg every 6 hours as needed, for no more than 7 days.',
+                    'Adults can take 200-400 mg every 4-6 hours as needed, with a maximum of 1200 mg per day.',
+                    'Dosage depends on age and weight, but generally, children can take 10-15 mg per kg of body weight every 4-6 hours, with a maximum of 4 doses per day.',],
+                    prices: ['PHP 4.99/tablet', 'PHP 8.95/tablet', 'PHP 23.00/tablet', ' PHP 5.75/tablet', 'PHP 8.00/tablet', 'PHP 32.75/tablet', 'PHP 12.75/tablet', 'PHP 4.75/tablet', 'PHP 40.25/tablet', 'PHP 90.00/10 capsules', 'PHP 186.50'], 
+                    links: ['medicines/paracetamol.html', 'medicines/alaxan.html', 'medicines/naproxen.html', 'medicines/rexidol.html', 'medicines/saridon.html', 'medicines/dolfenal.html', 'medicines/medicol.html', 'medicines/ritemed.html', 'medicines/ponstan.html', 'medicines/advil.html', 'medicines/calpol.html'],
+                    imagePrefix: 'Analgesic'
+                },
+                {
+                    container: '.accordion-content3',
+                    items: ['Ambroxol', 'Acetylcysteine', 'Carbocisteine'],
+                    descriptions: ['Adults can take 30 mg two to three times a day. It can be taken with or without food, but its best to drink plenty of fluids to help loosen the mucus.',
+                    ' For respiratory conditions, the typical adult dose is 200 mg 2-3 times a day. It can be taken with or without food, but its best to stay well-hydrated to help loosen mucus.',
+                    'For adults, the usual dose is 375 mg three times a day, which may be reduced to 375 mg twice daily once symptoms improve. '],
+                    prices: ['PHP 135.52', 'PHP 28.00', 'PHP 185.25'], 
+                    links: ['medicines/ambroxol.html', 'medicines/acetylcysteine.html', 'medicines/carbocisteine.html'],
+                    imagePrefix: 'Cough Supressant'
+                },
+                {
+                    container: '.accordion-content4',
+                    items: ['Robitussin DM', 'Lagundi syrup'],
+                    descriptions: ['Adults and children over 12 can take 10 ml every 4 hours, not exceeding 60 ml in 24 hours.',
+                    'For adults, the typical dose is 5-10 ml three to four times a day. For children, the dose is usually 2.5-5 ml three to four times a day, depending on the childs age and weight.'
+                    ],
+                    prices: ['PHP 212.67/20 mL', 'PHP 110.00/5mL'], 
+                    links: ['medicines/robitussin.html', 'medicines/lagundi.html'],
+                    imagePrefix: 'Antitussive'
+                },
+                {
+                    container: '.accordion-content5',
+                    items: ['Salbutamol'],
+                    descriptions: ['The typical dose for adults is 2-4 mg three to four times a day. For children, the dose is generally 0.1-0.2 mg per kg of body weight, three to four times a day.'],
+                    prices:['PHP 45.50/box'],
+                    links: ['medicines/salbutamol.html'],
+                    imagePrefix: 'Antiasthma'
+                },
+                {
+                    container: '.accordion-content6',
+                    items: ['Amoxicillin', 'Cephalexin', 'Cefuroxime', 'BL Cream', 'Cafaclor','Co-amoxiclav','Clarithromycin'],
+                    descriptions: [' The typical adult dose is 250-500 mg every 8 hours or 500-875 mg every 12 hours, depending on the severity of the infection.', 
+                    'The usual adult dose is 250-500 mg every 6 hours, or 500 mg every 12 hours, depending on the severity and type of infection.',
+                    'The typical adult dose is 250-500 mg twice daily for 7-10 days, depending on the infection. It should be taken with food to enhance absorption.', 
+                    'Apply a small amount to the affected area 1-3 times daily, as directed by a healthcare provider.',
+                    'The usual adult dose is 250-500 mg every 8 hours. It can be taken with or without food, but taking it with food can help reduce stomach upset.',
+                    'The typical adult dose is 500/125 mg every 8 hours or 875/125 mg every 12 hours. It should be taken with food to reduce stomach upset.',
+                    'The usual adult dose is 250-500 mg twice daily for 7-14 days, depending on the infection. It can be taken with or without food, but taking it with food can reduce stomach upset.'],
+                    prices: ['PHP 75.00', 'PHP 184.75', 'PHP 56.50/tablet', 'PHP 220.00/60mL', 'PHP 280.00', 'PHP 241.45', 'PHP 45.00/7g'], 
+                    links: ['medicines/amoxicillin.html', 'medicines/cephalexin.html', 'medicines/cefuroxime.html','medicines/blcream.html', 'medicines/cafaclor.html', 'medicines/amoxiclav.html', 'medicines/clarithromycin.html'],
+                    imagePrefix: 'Antibiotic'
+                },
+                {
+                    container: '.accordion-content7',
+                    items: ['Calmoseptine'],
+                    descriptions: ['Cleanse skin, pat dry & apply 2-4 times daily or as necessary.'],
+                    prices:['PHP 44.00/piece'],
+                    links: ['medicines/calmoseptine.html'],
+                    imagePrefix: 'Antiitch'
+                },
+                {
+                    container: '.accordion-content8',
+                    items: ['Betadine', 'Isopropyl Alcohol'],
+                    descriptions: ['To use Betadine, clean the affected area with soap and water, then apply the solution directly or with a sterile cotton swab. Let it dry before covering with a bandage or dressing.', 'To use isopropyl alcohol, apply it directly to the skin or surface using a cotton ball or pad. Allow it to air dry.'],
+                    prices:['PHP 78.50/15mL', 'PHP 99.00/500mL'],
+                    links: ['medicines/betadine.html', 'medicines/alcohol.html'],
+                    imagePrefix: 'Antiseptic'
+                },
+                {
+                    container: '.accordion-content9',
+                    items: ['Gaviscon 10ml', 'Gaviscon Double Action', 'Kremil-S', 'Kremil-S Advance', 'Maalox Tablet'],
+                    descriptions: ['The typical dose for adults is 10-20 ml after meals and at bedtime, or as needed.',
+                    'The typical dose for adults is 10-20 ml after meals and at bedtime, or as needed.',
+                    'The typical dose for adults is 10-20 ml after meals and at bedtime, or as needed.',
+                    ' The usual dose for adults is 1-2 tablets chewed thoroughly as needed, up to four times daily.',
+                    'The usual dose for adults is 1-2 tablets chewed thoroughly as needed, up to four times daily.',
+                    'The typical dose for adults is 1-2 tablets chewed thoroughly as needed, up to four times daily.'
+                    ],
+                    prices: ['PHP 33.90', 'PHP 40.75', 'PHP 9.75/tablet', 'PHP 21.75/tablet ', 'PHP 12.37/tablet'], 
+                    links: ['medicines/gaviscon.html','medicines/gavisconda.html','medicines/kremil.html','medicines/kremila.html','medicines/maalox.html'],
+                    imagePrefix: 'Antacid'
+                },
+                {
+                    container: '.accordion-content10',
+                    items: ['Ceelin Chewables', 'Ceelin Plus', 'Propan TLC', 'Conzace', 'Vitamin B Complex (Pharex)', 'Enervon', 'Stresstab', 'Centrum Advance', 'Centrum Silver', 'Myra E'],
+                    descriptions: ['The typical dose for children is one tablet daily, while adults may take one to two tablets daily, or as directed by a healthcare professional.',
+                    'The typical dose for children is one teaspoon (5 ml) daily, or as directed by a healthcare professional.',
+                    'The typical dose for adults is one capsule daily, preferably taken after meals, or as directed by a healthcare professional.',
+                    'The typical dose for adults is one capsule daily, preferably taken with meals, or as directed by a healthcare professional.',
+                    'The typical dose for adults is one tablet daily, preferably taken with meals, or as directed by a healthcare professional.',
+                    'The typical dose for adults is one tablet daily, preferably taken with meals, or as directed by a healthcare professional.',
+                    'The typical dose for adults is one tablet daily, preferably taken with meals, or as directed by a healthcare professional.',
+                    'The typical dose for adults is one tablet daily, preferably taken with meals, or as directed by a healthcare professional.',
+                    'The typical dose for adults is one tablet daily, preferably taken with meals, or as directed by a healthcare professional.',
+                    'The typical dose for adults is one capsule daily, preferably taken with meals, or as directed by a healthcare professional.'
+                    ],
+                    prices: ['PHP 5.27/100mg', 'PHP 380.75/500mL', 'PHP 369.75/250mL', 'PHP 14.50/tablet', 'PHP 6.50/price', 'PHP 222.75/30 tablets', 'PHP 92.00/8 tablets', 'PHP 300.75/30 tablets', 'PHP 373.50/30 tablets', 'PHP 382.00/30 tablets'], 
+                    links: ['medicines/ceelin.html','medicines/ceelinp.html','medicines/propan.html', 'medicines/conzace.html','medicines/pharex.html','medicines/enervon.html','medicines/stresstab.html','medicines/centruma.html','medicines/centrums.html','medicines/myra.html',],
+                    imagePrefix: 'Vitamins'
+                },
+                {
+                    container: '.accordion-content11',
+                    items: ['Celecoxib', 'Colchicine'],
+                    descriptions: ['The typical adult dose for osteoarthritis is 200 mg once daily or 100 mg twice daily. For rheumatoid arthritis, the dose is usually 100-200 mg twice daily.',
+                    'For an acute gout attack, the usual adult dose is 1.2 mg at the first sign of the attack, followed by 0.6 mg one hour later. For prevention, the typical dose is 0.6 mg once or twice daily.'],
+                    prices:['PHP 32.25/tablet', 'PHP 4.75/tablet'],
+                    links: ['medicines/celecoxib.html','medicines/colchicine.html'],
+                    imagePrefix: 'Antigout'
+                },
+                {
+                    container: '.accordion-content12',
+                    items: ['Gliclazide 60mg, 80mg', 'Glimepiride', 'Metformin'],
+                    descriptions: ['For the 60 mg modified-release tablets, the usual dose is 30-120 mg once daily with breakfast. For the 80 mg tablets, the usual dose is 40-320 mg per day, divided into 1-2 doses, usually taken with meals.',
+                    'The usual starting dose is 1-2 mg once daily with breakfast or the first main meal. The dose can be adjusted based on blood sugar levels, with a typical maximum of 8 mg per day.',
+                    'The usual starting dose is 500 mg twice daily or 850 mg once daily, taken with meals to reduce stomach upset. The dose can be gradually increased, with a maximum dose of 2000-2550 mg per day, depending on the specific formulation.'],
+                    prices: ['PHP 12.50 - PHP 6.75/tablet', 'PHP 6.50/tablet', 'PHP 3.99/tablet'], 
+                    links: ['medicines/gliclazide.html','medicines/glimepride.html','medicines/metformin.html'],
+                    imagePrefix: 'Hypoglycemic'
+                },
+                {
+                    container: '.accordion-content13',
+                    items: ['Imodium','Diatabs'],
+                    descriptions: ['For adults, the usual initial dose is 4 mg (two capsules) followed by 2 mg (one capsule) after each loose stool, up to a maximum of 16 mg (eight capsules) per day. It can be taken with or without food.',
+                    'For adults, the typical dose is 2 mg (one tablet) initially, followed by 1 mg (half tablet) after each loose stool, up to a maximum of 8 mg (four tablets) per day. It can be taken with or without food.'
+                    ],
+                    prices: ['PHP 18.75/tablet', 'PHP 8.50/tablet'], 
+                    links: ['medicines/imodium.html','medicines/diatabs.html'],
+                    imagePrefix: 'Antidiarrheal'
+                },
+                {
+                    container: '.accordion-content14',
+                    items: ['Atorvastatin 20mg, 40mg', 'Amlodipine 5mg, 10mg', 'Losartan 50mg, 100mg', 'Carvedilol 6.25mg, 25mg'],
+                    descriptions: ['The typical starting dose is 10-20 mg once daily, with adjustments made based on cholesterol levels. The usual dose range is 10-80 mg daily. It can be taken with or without food, but should be taken at the same time each day.',
+                    'The typical starting dose for adults is 5 mg once daily, which may be increased to a maximum of 10 mg once daily, depending on the patients response. It can be taken with or without food.',
+                    'The typical starting dose is 50 mg once daily, which can be increased to 100 mg once daily based on blood pressure response. It can be taken with or without food.',
+                    'The typical starting dose for heart failure is 3.125 mg twice daily, gradually increased to a maximum of 25 mg twice daily, depending on the patients response and tolerance. For hypertension, the starting dose is usually 6.25 mg twice daily, which can be adjusted as needed.'
+                    ],
+                    prices: ['PHP 16.50 - PHP 22.25/tablet', 'PHP 6.75 - PHP 9.00/tablet', 'PHP 6.00 - PHP 17.25', 'PHP 11.50 - PHP 12.00'], 
+                    links: ['medicines/atorvastatin.html','medicines/amlodipine.html','medicines/losartan.html','medicines/carvedilol.html'],
+                    imagePrefix: 'Antihypertensive'
+                },
+                {
+                    container: '.accordion-content15',
+                    items: ['Gauze', 'Cotton', 'Trust Condom', 'Medical Tape', 'Syringe 1mL, 5mL, 10mL'],
+                    descriptions: ['Gauze pads are sterile, absorbent pads used in wound care management. ', 'Used primarily for wound care, where it serves as a soft and absorbent material to gently clean and dress wounds.', 'Quality imported condoms, meticulously crafted for safety and comfort.', 'Essential for wound care and medical procedures.', 'Designed for accuracy and ease of use, each syringe features clear markings for precise measurement. '],
+                    prices: ['PHP 6.75/pad', 'PHP 18.00/piece', 'PHP 35.75/box', 'PHP 47.50/roll', 'PHP 4.00, PHP 6.25, PHP 5.25'], 
+                    links: ['medicines/gauze.html', 'medicines/cotton.html', 'medicines/condom.html','medicines/tape.html','medicines/syringe.html'],
+                    imagePrefix: 'Others'
+                }
+            ];
+
+            accordionData.forEach(function(data) {
+    var container = document.querySelector(data.container);
+
+    data.items.forEach(function(item, i) {
+        var card = document.createElement('div');
+        card.classList.add('card');
+        card.setAttribute('data-title', item);
+
+        var img = document.createElement('img');
+        if (data.imagePrefix) {
+            img.src = 'images/' + data.imagePrefix + (i + 1) + '.jpg';
+        }
+
+        var p = document.createElement('p');
+        p.textContent = item;
+
+        var span = document.createElement('span');
+        span.classList.add('description');
+        span.textContent = data.descriptions[i];
+
+        var priceSpan = document.createElement('span');
+        priceSpan.innerHTML = '<br><strong>Price: ' + data.prices[i] + '</strong>' + '<br><br>';
+        
+        var seeMoreLink = document.createElement('a');
+        seeMoreLink.textContent = 'See more';
+        seeMoreLink.href = data.links[i]; 
+
+        span.appendChild(document.createTextNode(' ')); 
+        span.appendChild(seeMoreLink);
+        span.appendChild(document.createElement('br')); 
+        span.appendChild(priceSpan);
+       
+        span.appendChild(document.createTextNode(' ')); 
+        span.appendChild(seeMoreLink);
+
+        card.appendChild(img);
+        card.appendChild(p);
+        card.appendChild(span);
+
+        card.addEventListener('mouseenter', openAccordion);
+        card.addEventListener('mouseleave', closeAccordion);
+
+        card.addEventListener('click', function() {
+            window.location.href = data.links[i];
+        });
+
+        container.appendChild(card);
+    });
+});
+
+function openAccordion() {
+    var description = this.querySelector('.description');
+    description.style.display = 'block';
+}
+
+function closeAccordion() {
+    var description = this.querySelector('.description');
+    description.style.display = 'none';
+}
+
+function toggleMenu() {
+    var ul = document.querySelector("nav ul");
+    ul.classList.toggle("show");
+}
+
+
+function toggleDescription() {
+    var description = this.querySelector('.description');
+    description.style.display = (description.style.display === 'none') ? 'block' : 'none';
+}
+
+function toggleMenu() {
+    var ul = document.querySelector("nav ul");
+    ul.classList.toggle("show");
+}
+
+        </script>
+    </div>
+
+    <div id="aknowledgements_container">
+        <p id="aknowledgements"><a href="acknowledgements.html">Acknowledgements</a></p>
+    </div>
+
+</body>
+
+<footer>
+    <p>St. James Pharmacy | Copyright ©️ <i>All Rights Reserved.</i> 2024 | Web Development by: Y. Bakil, R.G. Calla, K.L. De Leon | For Academic Purposes Only.</p>
+</footer>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>CATALOG | ST. JAMES PHARMACY</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="topbanner">
+            <nav>
+                <a href="../index.html" target="_self"><img id="logo" src="../images/logo2.png" /></a>
+                <div class="burger-menu" onclick="toggleMenu()">☰</div>
+                <ul>
+                    <li><a href="../index.html" target="_self">HOME</a></li>
+                    <li><a href="../about.html" target="_self">ABOUT</a></li>
+                    <li><a href="../catalog.html" target="_self" style="color:#1e6032">CATALOG</a></li>
+                    <li><a href="../contact.html" target="_self">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="back-button">
+            <button id="back" type="Buttonback" ><a href="../catalog.html">BACK</a></button>
+        </div>
+
+
+		<section>
+            
+            <div id="content_catalog_item">
+                <div id="img_catalog_item_container">
+                    <img id="img_catalog_item" src="../images/Others5.jpg" />
+                </div>
+
+                <div id="description_catalog_item_container">
+                    <h1 id="title_catalog_item" style="color:#0f1270;">Syringe (1mL, 5mL, 10mL)</h1>
+                    <p>
+                            <br />
+                            <h3>Indications</h3>
+                            <br />
+                            Available in 1ml, 5ml, and 10ml options, these syringes offer versatility to meet various dosage requirements. Designed for accuracy and ease of use, each syringe features clear markings for precise measurement. With smooth operation and a secure plunger, they ensure reliable delivery of medications. Suitable for both medical professionals and home use, syringes are indispensable in providing safe and effective patient care.
+                            
+                            <br>
+                            <br>
+                    </p>
+                   
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+<footer>
+    <p>St. James Pharmacy | Copyright ©️ <i>All Rights Reserved.</i> 2024 | Web Development by: Y. Bakil, R.G. Calla, K.L. De Leon | For Academic Purposes Only.</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        var ul = document.querySelector("nav ul");
+            ul.classList.toggle("show");
+     }
+</script>
+
+
+
+</html>
